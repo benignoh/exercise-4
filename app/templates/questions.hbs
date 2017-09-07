@@ -1,0 +1,27 @@
+{{#unless session.isPremium}}
+<p>
+  <button {{action 'makeVIP'}} type="button">Convertir en Premium</button>
+</p>
+{{/unless}}
+
+<table>
+  <thead>
+    <tr>
+      <th>Número</th>
+      <th>Pregunta</th>
+      <th>Id</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each model as |question|}}
+    <tr>
+      <td>{{question.number}}</td>
+      <td>{{question.text}}</td>
+      <td>{{question.id}}</td>
+      <td>{{link-to 'Editar' 'question' question}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+</table>

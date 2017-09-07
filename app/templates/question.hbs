@@ -1,0 +1,15 @@
+<form>
+  <p>
+    <label>Question</label>
+    {{input value=model.text}}
+  </p>
+
+  <p>
+    <label>Points</label>
+    {{input value=model.points type="number"}}
+  </p>
+  <p>
+    <button type="button" {{action 'delete'}}>Delete</button>
+    <button type="button" {{action 'save'}}>Save</button>
+  </p>
+</form>
